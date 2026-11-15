@@ -62,7 +62,8 @@ Install the packages and run all the steps from the main folder of the repositor
     ./run.sh
 
 `run.sh` trains the reference model, saves its predictions, computes the metrics and
-makes the figures. Everything is written in the `results` folder.
+makes the figures. Everything is written in the `results` folder. The figures are
+optional: they are not part of the assessment, they only help to interpret the results.
 
 To run a single script, set `PYTHONPATH` to the main folder first:
 
@@ -102,9 +103,13 @@ Save the predictions of your model for the inputs of a split:
     inputs, _ = load_samples("validation")
     save_predictions("validation", my_model(inputs))
 
-Then compute the metrics and make the figures, which do not depend on the model:
+Then compute the metrics, which do not depend on the model:
 
     python3 src/metrics/compute_metrics.py
+
+Optionally, make the figures. They are not part of the assessment, they only help to
+interpret the results:
+
     python3 src/plots/plot_rmse_boxplot.py
     python3 src/plots/plot_rmse_in_time.py
     python3 src/plots/plot_cff_on_fault.py
@@ -136,7 +141,7 @@ on a CPU. The errors change by several hundredths of MPa with the random seed.
     model_and_training/   reference model (DL-ROM), its training and its predictions
     src/data/             data reading for NumPy, PyTorch and JAX users
     src/metrics/          metrics of the predictions
-    src/plots/            figures
+    src/plots/            optional figures
     run.sh                runs everything
 
 `src/data/extract_data.py` creates the HDF5 files from the original simulation files,
