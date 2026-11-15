@@ -1,0 +1,10 @@
+# not public: hidden test set and original simulation files
+data/test.h5
+data/raw/
+
+# copy of the published article
+2026_Enhancing*.pdf
+
+# generated
+results/
+__pycache__/

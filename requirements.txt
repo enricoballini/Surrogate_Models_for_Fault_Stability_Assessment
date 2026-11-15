@@ -1,0 +1,11 @@
+numpy
+h5py
+matplotlib
+torch
+
+# only for JAX users (src/data/jax_dataset.py):
+# jax
+
+# only to extract the data from the original simulation files (src/data/extract_data.py):
+# pandas
+# openpyxl
