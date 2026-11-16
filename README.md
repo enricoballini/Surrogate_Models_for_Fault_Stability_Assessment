@@ -126,7 +126,8 @@ interpret the results:
 
 Accuracy is measured with the RMSE of DCFF = CFF_predicted - CFF_reference, in MPa. It
 is computed for each split, separately for the nine times of the training set and for
-the two future times. A physically acceptable error is about 0.1 MPa.
+the two future times: one value over all the fault cells, scenarios and times of the
+group. A physically acceptable error is about 0.1 MPa.
 
 Efficiency is measured with the number of trainable parameters and with the inference
 time per scenario. Write them in `results/efficiency.json` as in
