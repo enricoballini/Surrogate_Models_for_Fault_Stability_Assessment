@@ -7,4 +7,5 @@ data/raw/
 
 # generated
 results/
+.venv/
 __pycache__/
